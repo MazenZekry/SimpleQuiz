@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/question_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Quiz"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/purple_500"
+            android:id="@+id/tv_application_name"
+            />
+        <TextView
+            android:layout_width= "wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_application_name"
+            android:text="Question no: "
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/tv_question_number"
+            android:layout_marginStart="5dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Question here"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/tv_question_number"
+            android:id="@+id/tv_question"
+            android:textSize="20sp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_question"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="15dp"
+            app:dividerInsetEnd="80dp"
+            app:dividerColor="#6A000000"
+            app:dividerThickness="3sp"
+            android:id="@+id/divider"
+            />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioGroup"
+            app:layout_constraintTop_toBottomOf="@id/divider"
+            app:layout_constraintStart_toStartOf="parent"
+            >
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="Answer 1"
+                android:id="@+id/rb_answer1"
+                android:layout_marginTop="15dp"
+                android:paddingStart="5dp"
+                />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Answer 2"
+
+                android:textColor="@android:color/black"
+                android:id="@+id/rb_answer2"
+                android:layout_marginTop="15dp"
+                android:paddingStart="5dp"
+                />
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Answer 3"
+                android:id="@+id/rb_answer3"
+
+                android:textColor="@android:color/black"
+                android:layout_marginTop="15dp"
+                android:paddingStart="5dp"
+                />
+        </RadioGroup>
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/btn_nextQuestion"
+            android:text="CHECK"
+            android:textAllCaps="false"
+            app:cornerRadius="10dp"
+            android:textSize="19sp"
+            android:layout_marginTop="25dp"
+            app:layout_constraintTop_toBottomOf="@id/radioGroup"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/result_container"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/purple_500"
+            android:textSize="22sp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/tv_degree"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
